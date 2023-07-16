@@ -20,7 +20,6 @@ namespace asp.net_workshop_real_app_public.Controllers
         }
 
         [HttpGet("")]
-        [Authorize]
         public async Task<IActionResult> GetAllBooks()
         {
             var res = await _booksRepository.GetAllBooksAsync();
@@ -50,8 +49,8 @@ namespace asp.net_workshop_real_app_public.Controllers
             {
                 return BadRequest();
             }
-            /*return CreatedAtAction(nameof(GetBookById), new { id = id, controller = "books" }, newBookModel);*/
-            return CreatedAtAction(nameof(GetBookById), new { id = id, controller = "books" }, id);
+            return CreatedAtAction(nameof(GetBookById), new { id = id, controller = "books" }, newBookModel);
+          /*  return CreatedAtAction(nameof(GetBookById), new { id = id, controller = "books" }, id);*/
         }
 
         [HttpPut("{id}")]

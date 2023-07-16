@@ -19,7 +19,6 @@ namespace asp.net_workshop_real_app_public.Repositories
             return books;
         }
 
-        // תרגיל - תכתבו פונקציה (ותיישמו אותה) שמחזירה רשומה אחת בלבד לפי המזהה הייחודי
         public async Task<BookModel> GetBookById(int id)
         {
             /*var book = await _context.Books.FindAsync(id);*/
@@ -37,8 +36,10 @@ namespace asp.net_workshop_real_app_public.Repositories
             BookModel bookModel = new()
             {
                 Title = newBookModel.Title,
-                Description = newBookModel.Description
-            };
+                Description = newBookModel.Description,
+                BookCoverPath = newBookModel.BookCoverPath,
+                Price = newBookModel.Price
+        };
             author.Books.Add(bookModel);
             _context.Add(bookModel);
 

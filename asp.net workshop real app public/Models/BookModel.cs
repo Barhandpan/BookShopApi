@@ -6,5 +6,7 @@
         public string Title { get; set; }
         public string Description { get; set; }
         public AuthorModel Author { get; set; }
+        public double Price { get; set; }
+        public string BookCoverPath { get; set; }
     }
 }

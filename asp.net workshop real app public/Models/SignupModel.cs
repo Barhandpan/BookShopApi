@@ -18,7 +18,8 @@ namespace asp.net_workshop_real_app_public.Models
         [Compare("ConfirmPassword")]
         public string Password { get; set; }
 
-        [Required]
+        [Compare("Password")]
         public string ConfirmPassword { get; set; }
+
     }
 }

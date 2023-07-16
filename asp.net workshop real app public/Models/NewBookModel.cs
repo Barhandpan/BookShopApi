@@ -10,5 +10,8 @@ namespace asp.net_workshop_real_app_public.Models
 
         [Required(ErrorMessage = "Please add the author id")]
         public int AuthorId { get; set; }
+        public string BookCoverPath { get; set; }
+
+        public double Price { get; set; }
     }
 }
