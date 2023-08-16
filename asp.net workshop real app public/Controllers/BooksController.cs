@@ -64,7 +64,7 @@ namespace asp.net_workshop_real_app_public.Controllers
             return Ok(book);
         }
 
-        [HttpPatch("{id}")]
+/*        [HttpPatch("{id}")]
         public async Task<IActionResult> UpdateByPatch([FromRoute] int id, [FromBody] JsonPatchDocument updatedBook)
         {
             var book = await _booksRepository.UpdateByPatch(id, updatedBook);
@@ -74,7 +74,7 @@ namespace asp.net_workshop_real_app_public.Controllers
             }
             return Ok(book);
         }
-
+*/
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteBook([FromRoute] int id)
         {
